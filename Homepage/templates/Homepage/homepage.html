@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+{% load static %}
+<!--
+	Caminar by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style media="screen">
+    #naveer{
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    line-height: 1.5;
+    /* color: #212529; */
+
+    text-align: left;
+    margin-top: -90px;
+    margin-bottom: 70px;
+
+
+    /* ##
+
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left; */
+    }
+		#naveer{
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+		font-size: 1rem;
+		line-height: 1.5;
+		/* color: #212529; */
+
+		text-align: left;
+		margin-top: -90px;
+		margin-bottom: 70px;
+
+
+		/* ##
+
+		font-weight: 400;
+		line-height: 1.5;
+		color: #212529;
+		text-align: left; */
+		}
+
+
+		.flush{
+			/* padding: 40px; */
+		}
+		.spotlight{
+			width: 800px;
+			margin: 0 auto;
+		}
+		#trial{
+			align-items: center;
+		}
+		#founder_styling{
+			float: left;
+		}
+		#para_styling{
+			float: left;
+		}
+		h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "Dancing Script";
+  font-weight: bold;
+  font-size: 52px;
+  padding: 10px 0;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin: 50px 0;
+}
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+
+.team {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.team .teamMember {
+  display: inline-block;
+  width: 17%;
+  padding-top: 17%;
+  margin: 1%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  position: relative;
+}
+.team{
+	margin-top: 5%;
+}
+@media screen and (max-width: 850px) {
+  .team .teamMember {
+    width: 22%;
+    padding-top: 22%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .team .teamMember {
+    width: 30%;
+    padding-top: 30%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .team .teamMember {
+    width: 47%;
+    padding-top: 47%;
+    -webkit-filter: blur(0px) saturate(100%);
+            filter: blur(0px) saturate(100%);
+  }
+}
+@media screen and (max-width: 300px) {
+  .team .teamMember {
+    width: 97%;
+    padding-top: 97%;
+  }
+}
+/* .flush{
+	height: 500px !important;
+	width: 500px !important;
+} */
+.team .teamMember h1 {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  color: white;
+  font-weight: normal;
+  font-size: 20px;
+}
+.team .teamMember:hover, .team .teamMember.randomMember {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  cursor: pointer;
+}
+.flush{
+	border: 1px solid #1e1f23;
+}
+p {
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 50px 0;
+  color: #AAA;
+}
+p a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+p a:hover {
+  color: royalblue;
+}
+.teamMember{
+	border-radius: 10%;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+/* body{
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+} */
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+/* @media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+} */
+
+/* @media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
+} */
+
+/* .container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+} */
+
+.content_two {
+  position: relative;
+  width: 90%;
+  max-width: 300px;
+  margin: 40px;;
+  overflow: hidden;
+	margin-top: 50px;
+	display: inline-block;
+
+}
+.elements{
+	display: inline;
+}
+
+.content_two .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+	border-radius: 50%;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content_two:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content_two:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+#Specialimgs{
+	border-radius: 50%;
+	height: 300px;
+	width: 300px;
+
+}
+.mainDiv{
+	margin-top: 10%;
+	margin-top: 0;
+	text-align:center;
+}
+body{
+	padding-top: 0;
+}
+.navbar-toggler{
+	background-color: white !important;
+}
+.nav-link{
+	color: white !important;
+}
+/* header{
+	padding-top: 0px !important;
+} */
+.main{
+	padding-top: 50px;
+}
+
+
+    </style>
+		<title>Uchit - Allocate your contributions effetively | Home </title>
+		<meta charset="utf-8" />
+		  <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/photos.css' %}"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	</head>
+	<body style="padding-top: 0px;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+	<div class="container">
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item active">
+			<a class="nav-link" style="font-size:15px;"href="{% url 'Login' %}">Login</a>
+		</li>
+		<li class="nav-item active">
+			<a class="nav-link" style="font-size:15px;"href="{% url 'Signup' %}">Signup</a>
+		</li>
+
+
+
+	</ul>
+	</div>
+	</div>
+	</nav>
+
+		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'Homepage' %}"><img src="{% static 'ngosamyaklogo.png' %}" height='30' width='30' alt="">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav ml-auto">
+    <a id="header"class="nav-item nav-link" href="{% url 'Login' %}">Log In</a>
+    <a id="header"class="nav-item nav-link" href="{% url 'Signup' %}">Sign Up</a>
+
+  </div>
+  </div>
+  </nav> -->
+
+
+<!--/.Navbar-->
+		<!-- Header -->
+		<div class="main">
+
+
+			<header id="header">
+
+				<div class="logo"><a href="#">Uchit<span>Formerly known as NGOsamyak</span></a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+
+						<div id='mainPhoto' class="image fit flush">
+							<img src="{% static 'images/download (S).png' %}"  alt="" />
+						</div>
+						<header class="special">
+							<h1>Uchit</h1>
+							<p>The right choice</p>
+						</header>
+						<div class="content">
+							<p>Uchit is a non-profitable trust pioneered by the youth to convert their aspiration: Altruism knows no boundaries, into reality. The trust aims to be a vehicle of dissemination. Uchit envisions a day when India thrives in parity and prosperity. Uchit’s initial goal was to collect dry food, clothes, blankets, books, toys, materials that these underprivileged Indians are deprived of to let them know that we see them and we care. Now we aim to expand as a bridge between the NGO community and the contributors by providing a platform where we act as the carriers of happiness, we will collect the contributions and deliver them to the designated NGOs. Our vision is to see a world where maximum opportunities and resources are being sustainably utilized and that no area, no livelihood, no happiness is lost into oblivion. </p>
+							<p>On this website you can register to find out about NGOs and make contributions accordingly. We will provide a delivery facility to the contributors so that a direct delivery of their contributions can be made to the listed and chosen NGO. It's a humble request that the contribution made should be consumable and portable, contributing any faulty items will not be appreciated. Also please contribute keeping the relevant units in mind for example, Rice & Wheat (kgs) and Oil (ltrs). </p>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>Uchit</h2>
+							<p>Few glimpses from our previous operations</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+										<img src="{% static 'event1.jpg' %}"  alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<img src="{% static 'event2.jpg' %}"  alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<img src="{% static 'event3.jpg' %}"  alt="" />
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+									<img src="{% static 'event4.jpg' %}"  alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+<!-- <div class="team">
+	<div class="teamMember" style="background-image: url(https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/922761_471070876430506_560189114359548011_n.jpg?oh=75ddac04e3a22867091924e0446036f9&oe=571E83A8)">
+		<h1>Connor Gaunt</h1>
+	</div> -->
+	<section id="two" class="wrapper style2">
+		<header>
+			<h2>Organization Team</h2>
+		</header>
+		<div class="mainDiv">
+
+
+
+		<!-- <span>For</span> -->
+		<!-- <div class="container"> -->
+
+
+<div class="elements">
+
+
+		  <div class="content_two ">
+		    <a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+		      <div class="content-overlay"></div>
+		      <img id="Specialimgs" class="content-image" src="{% static 'dp.jpg' %}" >
+		      <div class="content-details fadeIn-bottom">
+		        <h3 class="content-title">Samyak Jain</h3>
+		        <p class="content-text">Founding
+		        <span>President<span>
+		     </p>
+		      </div>
+		    </a>
+		  </div>
+			</div>
+			<div class="elements">
+			<div class="content_two">
+				<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
+					<div class="content-overlay"></div>
+					<img id="Specialimgs" class="content-image" src="{% static 'ishadp.jpg' %}" >
+					<div class="content-details fadeIn-bottom">
+						<h3 class="content-title">Shivani Jain</h3>
+						<p class="content-text">Founder
+<span>
+				 </p>
+					</div>
+				</a>
+
+		</div>
+	</div>
+	</div>
+		<!-- <span>ENDFOR</span> -->
+
+		</div>
+	</section>
+
+
+
+				<!-- Three -->
+
+					<!-- <section id="three" class="wrapper">
+
+						<div class="spotlight">
+							<div class="image flush"><img src="{% static 'images/pic06.png' %}"  alt="" /></div>
+							<div class="inner">
+								<h3>Viverra Hendrerit</h3>
+								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+							</div>
+						</div>
+						<div class="spotlight alt">
+							<div class="image flush"><img src="{% static 'images/pic07.png' %}"  alt="" /></div>
+							<div  class="inner">
+								<h3>Curabitur Eget</h3>
+								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="{% static 'images/pic08.png' %}"  alt="" /></div>
+              <div  class="inner">
+								<h3>Curabitur Eget</h3>
+								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+							</div>
+						</div>
+					</section> -->
+
+
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<!-- <div class="container"> -->
+					<ul class="icons">
+						<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
+						<li><a href="https://www.facebook.com/UchitNGO/?modal=composer&__tn__=kC-R&eid=ARBZs11WXJguqF8LoUeXuszNQqrzMVNN-YSj_LU0Y5S8pUxCq-S42QU096G8OMpUKrOsmS_lz-25M1xF&hc_ref=ARTOGHMc7jDm6h2_vyZJ5hGVz73EqFtjGXvO_7JqtYXrildcZuv6xnYIabm7t-Xpzks&fref=nf&__xts__[0]=68.ARCCvERWACOJ7cLghMMmjBJ9N8vtQkgGiMoSftYUOsgi0w7O5TNdJ5HXtvkDWEAoO-zaQXXt9YN8JpVKFyFZRFB9DvI83Ax48Nfa8t3FlyLcHsowPWBrjfs_-ctuZWIL8AK5C8p8PyDV3EVb1xa0f9JAzx2rMRiDyRJC8HbX62H0P3siX8OSzugF1pAzFj4aPVSu5iSuztvv6NpH9Km_rfGUaJfCe4Ku7fnGNDBKg-pVM6oJtb7xXDEBBaoU6702CjOkNtxeYhFSJDL22x7h5RW3VA3KGhEWxBgRBj5zg1J9cyHf9kcZg0AyVIpCmSUCRHUT4v-AusjZ1avUk3n1KFvV2g" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/uchitngo/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:uchitngo@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+
+				<div class="copyright">
+					&copy; Untitled. All rights reserved. Images <a href="https://unsplash.com">Unsplash</a> Design <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</footer>
+					</div>
+
+
+
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

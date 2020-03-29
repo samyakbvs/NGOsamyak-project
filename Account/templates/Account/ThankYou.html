@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .Confirmation{
+      border-radius: 25px;
+    }
+    .jumbotron{
+      margin: 20%;
+      margin-top: 5%;
+      background-color: white;
+      font-family: zapfino;
+      line-height: 50px;
+      text-align: center;
+    }
+    .btn-primary{
+      font-family: Helvetica
+
+    }
+    .special{
+      width: 70%;
+    }
+    </style>
+  </head>
+  <title>Uchit | ThankYou</title>
+  <body>
+
+    <!-- <div class="jumbotron">
+          <h1>Thank you, our driver will </h1><br><h1>collect the donation shortly...</h1>
+          <br>
+            <a href="{% url 'database' %}"><input align='center' class='btn btn-primary' width='50' type="submit" value="Continue"></a>
+    </div> -->
+    <div class="jumbotron text-xs-center">
+  <h1 class="display-3">Thank You!</h1>
+  <p class="lead"><strong>Our executive will collect the donation shortly, </strong>please do not refresh the page. </p>
+  <hr class="special">
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" href="{% url 'Homepage' %}" role="button">Continue browsing</a>
+  </p>
+</div>
+  </body>
+</html>

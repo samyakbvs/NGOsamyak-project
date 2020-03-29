@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style media="screen">
+    .img-with-text {
+    text-align: justify;
+    width: 300px;
+}
+      img {
+        height: 200px;
+        width: 300px;
+        margin-right: 5%;
+        /* float: left; */
+      }
+      .container{
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
+      .special{
+        padding: 0
+      }
+      h5{
+        /* float: right; */
+      }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'database' %}">Back</a>
+  </nav>
+  </header>
+    <div class="container">
+      <h1>{{ detailSite.Name }}</h1><br>
+          <h5>{{ detailSite.Description }}</h5>
+          <img src="{{ detailSite.Picture.url }}" alt="">
+      <h6>Things needed: {{ detailSite.ThingsNeeded }}</h2>
+
+      <h6>Address: {{ detailSite.Address }}</h6>
+      <h6>Phone: {{ detailSite.Phone }}</h6>
+      <a href="{% url 'SiteForm' detailSite.id %}"><input class="btn btn-lg btn-primary " type="submit" name="" value="Go ahead"></a>
+    </div>
+  </body>
+</html> -->
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+body{
+  background-color: #313440;
+}
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      #detailedImg{
+        min-height: 300px;
+      }
+      .position-relative{
+        margin-top: 5%;
+        border-radius: 30px !important;
+        background-color: white;
+        border: none;
+      }
+      .sincara{
+        margin-left: 2%;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <title>Uchit | Detail</title>
+  <body>
+
+  <header id='header'>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+<a class="navbar-brand" href="{% url 'database' %}">Back</a>
+</nav>
+  </header>
+
+<div class="container">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <!-- <strong class="d-inline-block mb-2 text-primary">World</strong> -->
+          <h3 class="mb-0">{{ detailSite.Name }}</h3>
+          <br>
+          <!-- <div class="mb-1 text-muted">Nov 12</div> -->
+          <p class="card-text mb-auto">{{ detailSite.Description }}
+            <br><br>
+            <h6>Things needed: {{ detailSite.ThingsNeeded }}</h2>
+
+            <h6>Address: {{ detailSite.Address }}</h6>
+            <h6>Phone: {{ detailSite.Phone }} </h6><br>
+            <p><a href="{% url 'SiteForm' detailSite.id %}"><input class="btn btn-lg btn-primary " type="submit" name="" value="Kind"></a>
+               <a class="sincara"href="{% url 'SiteMonetaryForm' detailSite.id %}"><input class="btn btn-lg btn-primary " type="submit" name="" value="Monetary" disabled></a>
+
+</p>
+          <!-- <a href="#" class="stretched-link">Continue reading</a> -->
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+          <img id="detailedImg" src="{{ detailSite.Picture.url }}" width="400" height="100%" alt="">
+        </div>
+      </div>
+</div>
+
+</body>
+</html>
