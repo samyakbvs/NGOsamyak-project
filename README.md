@@ -1,0 +1,1 @@
+# NGOsamyak-project
