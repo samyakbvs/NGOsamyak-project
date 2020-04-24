@@ -133,10 +133,10 @@ def signup(request):
 
                 return render(request,'Homepage/confirmOTP.html')
         else:
-            return render(request, 'Homepage/Register.html', {'error':'Passwords must match'})
+            return render(request, 'Homepage/Signup.html', {'error':'Passwords must match'})
     else:
         # User wants to enter info
-        return render(request, 'Homepage/Register.html')
+        return render(request, 'Homepage/Signup.html')
 
 def verifyOTP(request):
     global logincode

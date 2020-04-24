@@ -32,14 +32,14 @@ def History(request):
 
 def Database(request):
     sites = Site.objects.all()
-    return render(request,'Account/Database.html',{'sites':sites})
+    return render(request,'Account/Library.html',{'sites':sites})
 
 def About(request):
     return render(request,'Account/About.html')
 
 def Detail(request,site_id):
     detailSite = get_object_or_404(Site, pk=site_id)
-    return render(request, 'Account/Detail.html', {'Site':detailSite})
+    return render(request, 'Account/Ngo.html', {'Site':detailSite})
 
 def Info(request):
     if request.method == 'POST':
@@ -106,7 +106,7 @@ def SiteForm(request,detailSite_id):
     else:
         detailSite = get_object_or_404(Site, pk=detailSite_id)
         ThingsRequired = detailSite.ThingsNeeded.split(',')
-        return render(request, 'Account/Form.html', {'detailSite':detailSite,'ThingsRequired':ThingsRequired})
+        return render(request, 'Account/KindForm.html', {'detailSite':detailSite,'ThingsRequired':ThingsRequired})
 
 @csrf_exempt
 def ThankYou(request,Donation_Type,CollectionId):
@@ -178,4 +178,4 @@ def SiteMonetaryForm(request,detailSite_id):
         return render(request, 'Account/paytm.html', {'param_dict':param_dict})
     else:
         detailSite = get_object_or_404(Site, pk=detailSite_id)
-        return render(request, 'Account/MonetaryForm.html',{'detailSite':detailSite})
+        return render(request, 'Account/MonetaryKindForm.html',{'detailSite':detailSite})
