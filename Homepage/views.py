@@ -37,9 +37,7 @@ def OTP(dob,email):
 
     return id
 
-def homepage(request):
-    auth.logout(request)
-    return render(request, 'Homepage/homepage.html')
+
 
 
 def login(request):
@@ -63,6 +61,7 @@ def login(request):
     #     dict = {'LoginForm':LoginForm}
     #     return render(request,'Homepage/login.html',context=dict)
     if request.method == 'POST':
+        print(request.POST['Username'])
         user = auth.authenticate(username=request.POST['Username'],password=request.POST['Password'])
         if user is not None:
             if user.register.IsVerified == True:
@@ -71,11 +70,11 @@ def login(request):
             else:
                 user.register.delete()
                 user.delete()
-                return render(request,'Homepage/homepage.html')
+                return redirect('Homepage')
         else:
-            return render(request, 'Homepage/login.html',{'error':'Username or Password is incorrect.'})
+            return render(request, 'Homepage/Login.html',{'error':'Username or Password is incorrect.'})
     else:
-        return render(request, 'Homepage/login.html')
+        return render(request, 'Homepage/Login.html')
 
 
 def signup(request):
@@ -137,7 +136,7 @@ def signup(request):
             return render(request, 'Homepage/signup.html', {'error':'Passwords must match'})
     else:
         # User wants to enter info
-        return render(request, 'Homepage/signup.html')
+        return render(request, 'Homepage/register.html')
 
 def verifyOTP(request):
     global logincode
@@ -154,10 +153,14 @@ def verifyOTP(request):
         user = User.objects.get(register=CurrentRegister)
         CurrentRegister.delete()
         user.delete()
-        return render(request,'Homepage/homepage.html')
+        return redirect('Homepage')
+
+
+def Home(request):
+    return render(request, 'Homepage/Home.html')
 
 
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
-    return redirect('Homepage')
+    return redirect('H')

@@ -19,30 +19,30 @@ class Site(models.Model):
     def summary(self):
         return self.Description[:70]
 
-class CreateHistory(models.Model):
-    TempImg = path_join('images', 'personal2.png')
-    Name = models.CharField(max_length=264,unique=False)
-    NGO_name = models.CharField(max_length=264)
-    ThingsDonated = models.CharField(max_length=1000)
-    NGO_image = models.ImageField(default=TempImg,upload_to='images/')
-    Paid = models.BooleanField(default=False)
+# class CreateHistory(models.Model):
+#     user = models.ForeignKey(User,on_delete=models.CASCADE,default=1,related_name='activities')
+#     ngo = models.ForeignKey(Site,default=1,on_delete=models.CASCADE)
+#     # TempImg = path_join('images', 'personal2.png')
+#     # Name = models.CharField(max_length=264,unique=False)
+#     # NGO_name = models.CharField(max_length=264)
+#     ThingsDonated = models.CharField(max_length=1000)
+#     # NGO_image = models.ImageField(default=TempImg,upload_to='images/')
+#     Paid = models.BooleanField(default=False)
 
 class Collection(models.Model):
-    user = models.CharField(max_length=264)
-    User_Address = models.CharField(max_length=1000)
-    User_Phone = models.BigIntegerField(validators=[MinValueValidator(1000000000)])
-    NGO = models.CharField(max_length=264)
-    NGO_Address = models.CharField(max_length=264)
-    Things = models.CharField(max_length=1000)
-    Donation_Type = models.CharField(max_length=264,default='None')
+    user = models.ForeignKey(User,on_delete=models.CASCADE,default=1,related_name='activities')
+    ngo = models.ForeignKey(Site,default=1,on_delete=models.CASCADE)
     Paid = models.BooleanField(default=False)
+    uid = models.CharField(max_length=264)
+
+class ThingsDonated(models.Model):
+    collection = models.ForeignKey(Collection,on_delete=models.CASCADE,default=1,related_name='things')
+    name = models.CharField(max_length=264)
+    quantity = models.IntegerField()
 
 class MonetaryCollection(models.Model):
-    user = models.CharField(max_length=264)
-    User_Address = models.CharField(max_length=1000)
-    User_Phone = models.BigIntegerField(validators=[MinValueValidator(1000000000)])
-    NGO = models.CharField(max_length=264)
-    NGO_Address = models.CharField(max_length=264)
+    user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
+    ngo = models.ForeignKey(Site,default=1,on_delete=models.CASCADE)
     Things = models.CharField(max_length=1000)
     Amount = models.BigIntegerField(default=1)
     Weight = models.BigIntegerField(default=1)

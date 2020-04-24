@@ -1,276 +1,223 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% extends 'Homepage/AuthBase.html' %}
+{% block content %}
+<!-- <header class="header-area center">
+   <div class="container">
+   <div class="row">
+   <div class="col-xs-12">
+   <h3 class="page-title">Contact</h3>
+   <div class="bread sub-title"><a href="../index.html"><span class="icon"><i class="flaticon-home"></i></span>Home</a><span class="separator">|</span><span class="current">Contact</span></div> </div>
+   </div>
+   </div>
+   </header>  -->
+   <style media="screen">
+    button {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    float: none;
+    color: #ffffff;
+    background-color: #fd3c65;
+    margin: 0px 5px -40px 0px;
+    padding: 15px 60px 15px 60px;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 2px 3px 2px 2px;
+    }
+    .loginInp{
+      border-radius: 10px !important;
+    }
+   </style>
+   <script type="text/javascript">
 
-  <meta charset="UTF-8">
+     const handler() => {
+       console.log("bleh")
+     }
 
-<style media="screen">
-@import url('https://rsms.me/inter/inter-ui.css');
-::selection {
-  background: #2D2F36;
-}
+   </script>
+<div class=" page-contents">
+   <div class="">
+      <div class="post-1135 page type-page status-publish hentry">
+         <div data-elementor-type="wp-post" data-elementor-id="1135" class="elementor elementor-1135" data-elementor-settings="[]">
+            <div class="elementor-inner">
+               <div class="elementor-section-wrap">
+                  <!-- <section class="elementor-element elementor-element-69587155 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="69587155" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                     <div class="elementor-container elementor-column-gap-extended">
+                     <div class="elementor-row">
+                     <div class="elementor-element elementor-element-67e5883e elementor-column elementor-col-100 elementor-top-column" data-id="67e5883e" data-element_type="column">
+                     <div class="elementor-column-wrap  elementor-element-populated">
+                     <div class="elementor-widget-wrap">
+                     <section class="elementor-element elementor-element-3e8236fe elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="3e8236fe" data-element_type="section">
+                     <div class="elementor-container elementor-column-gap-extended">
+                     <div class="elementor-row">
+                     <div class="elementor-element elementor-element-369dc382 elementor-column elementor-col-25 elementor-inner-column" data-id="369dc382" data-element_type="column">
+                     <div class="elementor-column-wrap  elementor-element-populated">
+                     <div class="elementor-widget-wrap">
+                     <div class="elementor-element elementor-element-7e2e73ed elementor-widget elementor-widget-feature-box" data-id="7e2e73ed" data-element_type="widget" data-widget_type="feature-box.default">
+                     <div class="elementor-widget-container">
+                     <div class="feature-box"><div class="feature-icon"><i class="flaticon-map"></i></div><div class="box-content"><h4 class="feature-title">Address Line</h4><div class="feature-content"><p>9327 Prairie St. Grove City,<br />
+                     OH 43123</p>
+                     </div></div></div> </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     <div class="elementor-element elementor-element-63f9883c elementor-column elementor-col-25 elementor-inner-column" data-id="63f9883c" data-element_type="column">
+                     <div class="elementor-column-wrap  elementor-element-populated">
+                     <div class="elementor-widget-wrap">
+                     <div class="elementor-element elementor-element-460b7de6 elementor-widget elementor-widget-feature-box" data-id="460b7de6" data-element_type="widget" data-widget_type="feature-box.default">
+                     <div class="elementor-widget-container">
+                     <div class="feature-box"><div class="feature-icon"><i class="flaticon-mail"></i></div><div class="box-content"><h4 class="feature-title">Email Address</h4><div class="feature-content"><p><a href="../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="5c39313d35301c39243d312c3039723f3331">[email&#160;protected]</a><br />
+                     <a href="../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="82ebece4edc2fbedf7f0e6edefe3ebecace1edef">[email&#160;protected]</a></p>
+                     </div></div></div> </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     <div class="elementor-element elementor-element-e304b3 elementor-column elementor-col-25 elementor-inner-column" data-id="e304b3" data-element_type="column">
+                     <div class="elementor-column-wrap  elementor-element-populated">
+                     <div class="elementor-widget-wrap">
+                     <div class="elementor-element elementor-element-6ca726dd elementor-widget elementor-widget-feature-box" data-id="6ca726dd" data-element_type="widget" data-widget_type="feature-box.default">
+                     <div class="elementor-widget-container">
+                     <div class="feature-box"><div class="feature-icon"><i class="flaticon-phone-call-1"></i></div><div class="box-content"><h4 class="feature-title">Phone Number</h4><div class="feature-content"><p>+(123) 123-4567<br />
+                     +(880) 654-8795</p>
+                     </div></div></div> </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     <div class="elementor-element elementor-element-4e9196d6 elementor-column elementor-col-25 elementor-inner-column" data-id="4e9196d6" data-element_type="column">
+                     <div class="elementor-column-wrap  elementor-element-populated">
+                     <div class="elementor-widget-wrap">
+                     <div class="elementor-element elementor-element-141343a3 elementor-widget elementor-widget-feature-box" data-id="141343a3" data-element_type="widget" data-widget_type="feature-box.default">
+                     <div class="elementor-widget-container">
+                     <div class="feature-box"><div class="feature-icon"><i class="flaticon-support-1"></i></div><div class="box-content"><h4 class="feature-title">24//7 Support</h4><div class="feature-content"><p>24/7 Ready Our Support Team For You. Day to night.</p>
+                     </div></div></div> </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     </section>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     </div>
+                     </section> -->
+                  <section style="padding-top:50px;"class="elementor-element elementor-element-be7a5f5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="be7a5f5" data-element_type="section">
+                     <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                           <div class="elementor-element elementor-element-1d08057 elementor-column elementor-col-100 elementor-top-column" data-id="1d08057" data-element_type="column">
+                              <div class="elementor-column-wrap  elementor-element-populated">
+                                 <div class="elementor-widget-wrap">
+                                    <section class="elementor-element elementor-element-699bbd9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="699bbd9" data-element_type="section">
+                                       <div class="elementor-container elementor-column-gap-no">
+                                          <div class="elementor-row">
+                                             <div class="elementor-element elementor-element-ebf4cf3 elementor-column elementor-col-16 elementor-inner-column" data-id="ebf4cf3" data-element_type="column">
+                                                <div class="elementor-column-wrap">
+                                                   <div class="elementor-widget-wrap"></div>
+                                                </div>
+                                             </div>
+                                             <div class="elementor-element elementor-element-ac8af85 elementor-column elementor-col-66 elementor-inner-column" data-id="ac8af85" data-element_type="column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                   <div class="elementor-widget-wrap">
+                                                      <div class="elementor-element elementor-element-6109304 elementor-invisible elementor-widget elementor-widget-section-title-addons" data-id="6109304" data-element_type="widget" data-settings="{&quot;icon_color&quot;:&quot;rgba(244,244,244,0.9)&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="section-title-addons.default">
+                                                         <div class="elementor-widget-container">
+                                                            <div style="align-items:center;"class="profund-section-heading text-center ">
+                                                               <h5 class="top-heading heading-bar-none">Uchit</h5>
+                                                               <h2 class="main-heading">Login</h2>
+                                                               <div class="icon"><i class="flaticon-heart"></i></div>
+                                                               <br>
+                                                               <form style="margin:0 auto;"class=" " action="{% url 'Login' %}" method="post">
+                                                                 {% csrf_token %}
+                                                                 <input class='loginInp'style="width:50%;"type="text" name="Username" value="">
+                                                                 <input class='loginInp'style="width:50%;"type="password" name="Password" value="">
+                                                                 <br>
+                                                                 <br>
+                                                                 <button type="submit" class="submit-form mouse-dir"><span class="btn__text">Submit</span><span class="dir-part"></span> <i class="fa fa-paper-plane"></i></button>
+                                                               </form>
+                                                               <br><br>
+                                                               {{ error }}
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="elementor-element elementor-element-1b3355a elementor-column elementor-col-16 elementor-inner-column" data-id="1b3355a" data-element_type="column">
+                                                <div class="elementor-column-wrap">
+                                                   <div class="elementor-widget-wrap"></div>
+                                                </div>
+                                             </div>
 
-::-webkit-selection {
-  background: #2D2F36;
-}
-::-moz-selection {
-  background: #2D2F36;
-}
-body {
-  background: #313440;
-  font-family: 'Inter UI', sans-serif;
-  margin: 0;
-  padding: 20px;
-}
+                                          </div>
+                                       </div>
+                                    </section>
 
-.page {
-
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 40px);
-  position: absolute;
-  place-content: center;
-  width: calc(100% - 40px);
-}
-@media (max-width: 767px) {
-  .page {
-    height: auto;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-  }
-}
-.container2 {
-  display: flex;
-  height: 320px;
-  margin: 0 auto;
-  width: 640px;
-}
-@media (max-width: 767px) {
-  .container2 {
-    flex-direction: column;
-    height: 630px;
-    width: 320px;
-  }
-}
-.left {
-  background: white;
-  height: calc(100% - 40px);
-  top: 20px;
-  position: relative;
-  width: 50%;
-}
-@media (max-width: 767px) {
-  .left {
-    height: 100%;
-    left: 20px;
-    width: calc(100% - 40px);
-    max-height: 270px;
-  }
-}
-.login {
-  font-size: 50px;
-  font-weight: 900;
-  margin: 50px 40px 40px;
-}
-.eula {
-  color: #999;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 40px;
-}
-.right {
-  background: #474A59;
-  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
-  color: #F1F1F2;
-  position: relative;
-  width: 50%;
-}
-@media (max-width: 767px) {
-  .right {
-    flex-shrink: 0;
-    height: 100%;
-    width: 100%;
-    max-height: 350px;
-  }
-}
-svg {
-  position: absolute;
-  width: 320px;
-}
-path {
-  fill: none;
-  stroke: url(#linearGradient);;
-  stroke-width: 4;
-  stroke-dasharray: 240 1386;
-}
-.form {
-  margin: 40px;
-  position: absolute;
-}
-label {
-  color:  #c2c2c5;
-  display: block;
-  font-size: 14px;
-  height: 16px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-input {
-  background: transparent;
-  border: 0;
-  color: #f2f2f2;
-  font-size: 20px;
-  height: 30px;
-  line-height: 30px;
-  outline: none !important;
-  width: 100%;
-}
-input::-moz-focus-inner {
-  border: 0;
-}
-#submit {
-  color: #707075;
-  margin-top: 40px;
-  transition: color 300ms;
-}
-#submit:focus {
-  color: #f2f2f2;
-}
-#submit:active {
-  color: #d0d0d2;
-}
-.navbar{
-  padding-top: 0 !important;
-}
-body{
-  padding-top: 5px !important;
-}
-</style>
-</head>
-<title>Uchit | LogIn</title>
-<body>
-
-<!-- partial:index.partial.html -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-<div class="container">
-<a class="navbar-brand nav-item-lg active" style="font-size: 1.75em;" href="{% url 'Homepage' %}">Uchit</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarResponsive">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item active">
-  <a class="nav-link" style="font-size:15px;"href="{% url 'Login' %}">Login</a>
-</li>
-<li class="nav-item active">
-  <a class="nav-link" style="font-size:15px;"href="{% url 'Signup' %}">Signup</a>
-</li>
-
-
-
-</ul>
+                                    <!-- <section class="elementor-element elementor-element-ff30530 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="ff30530" data-element_type="section">
+                                       <div class="elementor-container elementor-column-gap-default">
+                                          <div class="elementor-row">
+                                             <div class="elementor-element elementor-element-f281e82 elementor-column elementor-col-100 elementor-inner-column" data-id="f281e82" data-element_type="column">
+                                                <div style="padding-left:35%;padding-right:35%;"class="elementor-column-wrap  elementor-element-populated">
+                                                   <div class="elementor-widget-wrap">
+                                                      <div class="elementor-element elementor-element-a11e675 elementor-widget elementor-widget-profund_Subscribe_Form" data-id="a11e675" data-element_type="widget" data-widget_type="profund_Subscribe_Form.default">
+                                                         <div class="elementor-widget-container">
+                                                            <div class="shortcode-form">
+                                                               <div role="form" class="wpcf7" id="wpcf7-f1407-p1135-o1" lang="en-US" dir="ltr">
+                                                                  <div class="screen-reader-response"></div>
+                                                                  <form onsubmit="handler()" action="{% url 'Login' %}" method="post" class="">
+                                                                    {% csrf_token %}
+                                                                     <div style="display: none;">
+                                                                        <input type="hidden" name="_wpcf7" value="1407" />
+                                                                        <input type="hidden" name="_wpcf7_version" value="5.1.6" />
+                                                                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1407-p1135-o1" />
+                                                                        <input type="hidden" name="_wpcf7_container_post" value="1135" />
+                                                                     </div>
+                                                                     <div class="contact-form">
+                                                                        <div class="row">
+                                                                           <div class="form-group col-sm-12 col-md-12">
+                                                                              <label class="label-control mb-10" for="name">Username*</label><br />
+                                                                              <span class="user-name"><input type="text" name="Username"  size="40" class=" form-control-item" id="name" aria-required="true" aria-invalid="false" placeholder="i.e. John Doe" /></span>
+                                                                           </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                           <div class="form-group col-sm-12 col-md-12">
+                                                                              <label class="label-control mb-10" for="name">Password*</label><br />
+                                                                              <span class="user-name"><input type="password" name="Password"  size="40" class=" form-control-item" id="name" aria-required="true" aria-invalid="false" placeholder="" /></span>
+                                                                           </div>
+                                                                        </div>
+                                                                        <div style="margin-top:30px;"class="form-row">
+                                                                           <div class="form-group col-sm-12 text-center">
+                                                                              <button type="submit" class="submit-form mouse-dir"><span class="btn__text">Submit</span><span class="dir-part"></span> <i class="fa fa-paper-plane"></i></button>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                                                  </form>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </section> -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
-</div>
-</nav>
-<div class="page">
-  <div class="container2">
-    <div class="left">
-      <div class="login">Login</div>
-      <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
-    </div>
-    <div class="right">
-      <svg viewBox="0 0 320 300">
-        <defs>
-          <linearGradient
-                          inkscape:collect="always"
-                          id="linearGradient"
-                          x1="13"
-                          y1="193.49992"
-                          x2="307"
-                          y2="193.49992"
-                          gradientUnits="userSpaceOnUse">
-            <stop
-                  style="stop-color:#ff00ff;"
-                  offset="0"
-                  id="stop876" />
-            <stop
-                  style="stop-color:#ff0000;"
-                  offset="1"
-                  id="stop878" />
-          </linearGradient>
-        </defs>
-        <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
-      </svg>
-      <form class="form" id="onlyForm" action="{% url 'Login' %}" method="POST">
-           {% csrf_token %}
-        <label for="email">Username</label>
-        <input autocomplete="off" name="Username" id="email">
-        <label for="password">Password</label>
-        <input autocomplete="off" name="Password" type="password" id="password">
-        <input ondblclick="readURL(this);"type="submit" id="submit" value="Submit">
-      </form>
-    </div>
-  </div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
-<script type="text/javascript">
 
-function readURL(input) {
-            javascript:{document.getElementById('onlyForm').submit()}
-            console.log("kuch hoja")
-    }
-var current = null;
-document.querySelector('#email').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: 0,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '240 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-document.querySelector('#password').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: -336,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '240 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-document.querySelector('#submit').addEventListener('focus', function(e) {
-  if (current) current.pause();
-  current = anime({
-    targets: 'path',
-    strokeDashoffset: {
-      value: -730,
-      duration: 700,
-      easing: 'easeOutQuart'
-    },
-    strokeDasharray: {
-      value: '530 1386',
-      duration: 700,
-      easing: 'easeOutQuart'
-    }
-  });
-});
-</script>
-</body>
-</html>
+{% endblock %}

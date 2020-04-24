@@ -1,0 +1,66 @@
+@media only screen and (max-width: 1200px) {
+    .primary-menu ul.nav li a {
+        padding:15px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .mainmenu-area .action-button {
+        padding: 6px 12px;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+    .comment-form .comment-form-author,
+    .comment-form .comment-form-email {
+        width: 100%;
+    }
+    #scrollUp {
+        bottom: 15px;
+        right: 15px;
+    }
+    .social-share,
+    .single-tags {
+        width: 100%
+    }
+    .single-post-navigation .nav-links {
+        display: block;
+    }
+    .single-post-navigation .nav-links .nav-previous,
+    .single-post-navigation .nav-links .nav-next {
+        width: 100%;
+        max-width: 100%;
+        text-align: center
+    }
+    .posts-list .post-content,
+    .content-boundary {
+        border: none;
+    }
+    .admin-bar .mainmenu-area.affix {
+        top: 0px;
+    }
+    .menu-search-form .search-input {
+        padding: 30px 15px;
+        font-size: 16px;
+    }
+    .animated {
+        /*CSS transitions*/
+        transition-property: none !important;
+        /*CSS transforms*/
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        animation: none !important;
+    }
+
+}
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (max-width: 480px) {
+    .xs-full {
+        width: 100%;
+    }
+    .mainmenu-area .equal-height {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

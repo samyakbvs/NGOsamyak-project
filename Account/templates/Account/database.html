@@ -1,444 +1,61 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<style media="screen">
-body{
-      font-family: 'Raleway', sans-serif;
-    background-image: url(img/loginimage.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: scroll;
-    display: block;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    visibility: visible;
-    opacity: 1;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    overflow-x: hidden;
-  }
+{% extends 'Account/AccountBase.html' %}
 
+{% block content %}
 
-/*NGOS Profile start*/
-
-.img-opacity{
-  opacity: .75;
-}
-
-.img-opacity:hover{
-  opacity: 1;
-  transition: 0.5s;
-  transition-delay: 1s;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #777;
-}
-
-.title_profile{
-  font-size: 36px;
-  color: #fff!important;
-  /* font-weight: bold; */
-}
-
-h3{
-  font-size: 24px;
-  color: #333;
-  font-weight: bold;
-}
-
-#team img{
-  /* margin-top: -50px; */
-}
-
-#team i{
-  font-size: 26px;
-  color: #555;
-}
-
-#team p{
-  font-weight: 500;
-}
-
-#team .card{
-  border-radius: 0;
-  box-shadow: 5px 5px 15px #000000;
-  transition: all 0.3s ease-in;
-  -webkit-transition:all 0.3s ease-in;
-  -moz-transition:all 0.3s ease-in;
-}
-
-#team .card:hover{
-  background: #55aa66;
-  color: #fff;
-    box-shadow: 5px 5px 15px #000000;
-  border-radius: 5px;
-  border:none;
-
-}
-
-#team .card:hover h3, #team .card:hover i{
-color: #fff;
-}
-.card{
-  margin-top: 50px;
-  border-radius: 20px !important;
-  min-height: 400px !important;
-}
-
-/*Ngos profile end*/
-
-
-  button{
-    background-color: #55aaff!important;
-    border: none  !important;
-  }
-
-  /* hexagon shape*/
-
-</style>
-  <title>Uchit | NGOs</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img\uchiticon.png">
-
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
-
-
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/ jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-
-</head>
-<body style="background: #313440;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: scroll;
-    display: block;top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    visibility: visible;
-    opacity: 1;">
-
-    <!-- <div id="account_header">
+<header class="header-area center">
+   <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div id="login_fields">
-            <ul>
-              <li><a href="myaccount.html"><i class="fa fa-user"></i>My Account</a></li>
-              <li><a href="ngos profile.html">NGOs</a></li>
-              <li><a href="activities.html">Activities</a></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-    <div class="container">
-    <a style="color: white; font-size: 25px;" class="navbar-brand nav-item-lg active" href="#">Uchit</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'Info' %}">Account</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'database' %}">NGOs</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'History' %}">Activities</a>
-      </li>
-
-      <form id="log" action="{% url 'logout' %}" method="POST" >
-    {% csrf_token %}
-    <input type="hidden" name="" value="">
-    <li class="nav-item active">
-    <a class="nav-link" href="javascript:{document.getElementById('log').submit()}">Logout</a>
-    </li>
-    </form>
-    </ul>
-    </div>
-    </div>
-    </nav>
-    <section id="team">
-      <div class="container my-3 py-5 text-center">
-        <div class="row mb-5">
-          <div class="col">
-            <h1 class="title_profile">NGOs Profile</h1>
-            <p class="mt-3">  </p>
-          </div>
-        </div>
-
-        <div class="row">
-          {% for site in sites.all %}
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="{{ site.Picture.url }}" style="width: 100px; height: 100px;" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>{{ site.Name}}</h3>
-
-                <p>{{ site.summary }}...</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="{% url 'detail' site.id %}">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-
-          <!-- <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p></p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <img src="img\1.jpg" alt="" class="img-fluid rounded-circle shadow-sm w-50 mb-3">
-                <h3>Uchit Ngo</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolore.</p>
-
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#">
-                      <button class="btn btn-primary">View Profile</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
+         <div class="col-xs-12">
+            <h3 class="page-title">Our library of NGOs</h3>
+            <div class="bread sub-title"><a href="../index.html"><span class="icon"><i class="flaticon-home"></i></span>Home</a><span class="separator">|</span><span class="current">Library</span></div>
+         </div>
       </div>
-    </section>
+   </div>
+</header>
+<section class="section-padding">
+   <div class="container">
+      <div class="posts-list post-grid-two masonrys row">
+        {% for site in sites.all %}
+         <div class="masonry-item col-xs-12 col-md-6">
+            <div class="post-single post-63 post type-post status-publish format-standard has-post-thumbnail hentry category-charity category-donations category-profit tag-charity tag-donations tag-non-profit tag-volounteers">
+               <figure class="post-media"><img width="1920" height="1080" src="/static/../wp-content/uploads/sites/4/2019/08/post-11-1.jpg" class="attachment-full size-full wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1.jpg 1920w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-450x253.jpg 450w" sizes="(max-width: 1920px) 100vw, 1920px" /></figure>
+               <div class="post-content">
+                  <h2 class="post-title"><a href="{% url 'detail' site.id %}" rel="bookmark">{{ site.Name }}</a></h2>
+                  <div class="post-desc">{{ site.summary }}...</div>
+                  <div class="post-meta"> <span class="author meta-item">
+                    <span class="icon"><i title="Post Author" class="flaticon-user"></i></span> Ashekur_rahman</span> <span class="meta-item">
+                    <!-- <span class="icon"><i title="Post publish date" class="flaticon-time"></i></span> <a href="../2019/08/03/index.html">August 3, 2019</a></span> -->
+                     <!-- <span class="cat-list meta-item"><span class="icon"><i title="Post Categories" class="flaticon-bookmark-white"></i></span> <a href="../category/charity/index.html" rel="category tag">Charity</a>, <a href="../category/donations/index.html" rel="category tag">Donations</a>, <a href="../category/profit/index.html" rel="category tag">Profit</a></span> </div> -->
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+         <!-- <div class="masonry-item col-xs-12 col-md-6">
+            <div class="post-single post-64 post type-post status-publish format-gallery has-post-thumbnail hentry category-charity category-donations category-profit tag-charity tag-donations tag-non-profit tag-volounteers post_format-post-format-gallery">
+               <div class="photo-slider post-media">
+                  <div class="gallery-item"><img width="1920" height="1080" src="../wp-content/uploads/sites/4/2019/08/post-15.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15.jpg 1920w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-450x253.jpg 450w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+                  <div class="gallery-item"><img width="1920" height="1080" src="../wp-content/uploads/sites/4/2019/08/post-4-1.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-4-1.jpg 1920w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-4-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-4-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-4-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-4-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-4-1-450x253.jpg 450w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+                  <div class="gallery-item"></div>
+                  <div class="gallery-item"><img width="1920" height="1080" src="../wp-content/uploads/sites/4/2019/08/post-13-1.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-13-1.jpg 1920w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-13-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-13-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-13-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-13-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-13-1-450x253.jpg 450w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+                  <div class="gallery-item"><img width="1920" height="1080" src="../wp-content/uploads/sites/4/2019/08/post-14-1.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-14-1.jpg 1920w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-14-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-14-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-14-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-14-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-14-1-450x253.jpg 450w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+               </div>
+               <div class="post-content">
+                  <h2 class="post-title"><a href="../2019/08/03/a-universal-desire-to-help-how-gofundme-reached-40-million-donors/index.html" rel="bookmark">A Universal Desire to Help: How ProFund Reached 40 Million Donors</a></h2>
+                  <div class="post-desc">As the Southeast prepares for Hurricane Florence, GoFundMe is also making preparations and working with state and local officials to ensure that the money raised on GoFundMe will get to...</div>
+                  <div class="post-meta"> <span class="author meta-item"><span class="icon"><i title="Post Author" class="flaticon-user"></i></span> Ashekur_rahman</span> <span class="meta-item"><span class="icon"><i title="Post publish date" class="flaticon-time"></i></span> <a href="../2019/08/03/index.html">August 3, 2019</a></span> <span class="cat-list meta-item"><span class="icon"><i title="Post Categories" class="flaticon-bookmark-white"></i></span> <a href="../category/charity/index.html" rel="category tag">Charity</a>, <a href="../category/donations/index.html" rel="category tag">Donations</a>, <a href="../category/profit/index.html" rel="category tag">Profit</a></span> </div>
+               </div>
+            </div>
+         </div> -->
+      </div>
+      <div class="row">
+         <div class="col-xs-12">
+            <div class="nav-links text-center"><span aria-current='page' class='page-numbers current'>1</span>
+               <a class='page-numbers' href='page/2/index.html'>2</a>
+               <a class="next page-numbers" href="page/2/index.html"><i class="flaticon-right-arrow"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="js\bootstrap.min.js"></script>
-
-
-  <!-- <script src="https://kit.fontawesome.com/8084b9a923.js" crossorigin="anonymous"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="js\bootstrap.min.js"></script> -->
-</body>
-</html>
+{% endblock %}
