@@ -72,9 +72,9 @@ def login(request):
                 user.delete()
                 return redirect('Homepage')
         else:
-            return render(request, 'Homepage/Login.html',{'error':'Username or Password is incorrect.'})
+            return render(request, 'Homepage/Auth.html',{'error':'Username or Password is incorrect.'})
     else:
-        return render(request, 'Homepage/Login.html')
+        return render(request, 'Homepage/Auth.html')
 
 
 def signup(request):
@@ -133,10 +133,10 @@ def signup(request):
 
                 return render(request,'Homepage/confirmOTP.html')
         else:
-            return render(request, 'Homepage/signup.html', {'error':'Passwords must match'})
+            return render(request, 'Homepage/Register.html', {'error':'Passwords must match'})
     else:
         # User wants to enter info
-        return render(request, 'Homepage/register.html')
+        return render(request, 'Homepage/Register.html')
 
 def verifyOTP(request):
     global logincode
