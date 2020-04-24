@@ -90,7 +90,8 @@ WSGI_APPLICATION = 'NGOsamyak.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'god',
+        # 'NAME': 'god',
+                'NAME': 'god2',
         # 'USER': 'postgres',
 'USER': 'samyakbvs',
         'PASSWORD': 'Shivani02',
