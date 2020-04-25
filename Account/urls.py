@@ -8,6 +8,7 @@ urlpatterns = [
     path('Info/',views.Info,name='Info'),
     path('History/',views.History,name='History'),
     path('Database/',views.Database,name='Database'),
+    path('Donate/',views.Donate,name='Donate'),
     path('Site/<int:site_id>/', views.Detail , name="detail"),
     path('Form/<int:detailSite_id>/', views.SiteForm , name="SiteForm"),
     path('ThankYou/<str:Donation_Type>/<str:CollectionId>/', views.ThankYou, name='ThankYou'),

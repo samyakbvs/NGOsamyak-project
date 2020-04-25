@@ -71,33 +71,50 @@ def changeDetails(request):
     else:
         return render(request, 'Account/changeDetails.html')
 
+def Donate(request):
+    if request.method == 'POST':
+        amount = request.POST['Amount']
+        param_dict = {
+            'MID':'DhKcem03471021583928',
+            'ORDER_ID': str(uuid.uuid1()),
+            'TXN_AMOUNT': str(amount),
+            'CUST_ID': str(request.user.register.Email),
+            'INDUSTRY_TYPE_ID':'Retail',
+            'WEBSITE':'WEBSTAGING',
+            'CHANNEL_ID':'WEB',
+	        # 'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+            'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/DONATION/'+str(kind_donation.uid)+'/',
+        }
+    pass
+
 def SiteForm(request,detailSite_id):
     if request.method=='POST':
 
         site = get_object_or_404(Site, pk=detailSite_id)
         uid = str(uuid.uuid1())
         kind_donation = Collection(user=request.user,ngo=site,Paid=False,uid=uid)
+        kind_donation.save()
         for i in site.ThingsNeeded.split(','):
             if request.POST['{}_count'.format(i)] != 0:
                 quantity = int(request.POST['{}_count'.format(i)])
                 things_donated = ThingsDonated(collection=kind_donation,name=i,quantity=quantity)
+                things_donated.save()
 
         amount = 10
-        kind_donation.save()
-        things_donated.save()
+
 
         # return redirect('History')
 
         param_dict = {
             'MID':'DhKcem03471021583928',
-            'ORDER_ID': str(randint(0,1000000000000000000000)),
+            'ORDER_ID': uid,
             'TXN_AMOUNT': str(amount),
             'CUST_ID': str(request.user.register.Email),
             'INDUSTRY_TYPE_ID':'Retail',
             'WEBSITE':'WEBSTAGING',
             'CHANNEL_ID':'WEB',
-	        'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
-            # 'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+	        # 'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+            'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
         }
 
         param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict,MERCHANT_KEY)
