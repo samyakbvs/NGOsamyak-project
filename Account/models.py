@@ -40,6 +40,12 @@ class ThingsDonated(models.Model):
     name = models.CharField(max_length=264)
     quantity = models.IntegerField()
 
+class Donation(models.Model):
+    amount = models.BigIntegerField(default=0)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    uid = models.CharField(max_length=264)
+    succesful = models.BooleanField(default=False)
+
 class MonetaryCollection(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
     ngo = models.ForeignKey(Site,default=1,on_delete=models.CASCADE)

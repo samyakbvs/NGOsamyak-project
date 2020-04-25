@@ -11,7 +11,7 @@ urlpatterns = [
     path('Donate/',views.Donate,name='Donate'),
     path('Site/<int:site_id>/', views.Detail , name="detail"),
     path('Form/<int:detailSite_id>/', views.SiteForm , name="SiteForm"),
-    path('ThankYou/<str:Donation_Type>/<str:CollectionId>/', views.ThankYou, name='ThankYou'),
+    path('ThankYou/<str:Donation_Type>/<str:uid>/', views.ThankYou, name='ThankYou'),
     path('ChangeDetails/', views.changeDetails, name='ChangeDetails'),
     path('MonetaryForm/<int:detailSite_id>/', views.SiteMonetaryForm, name='SiteMonetaryForm'),
 ]

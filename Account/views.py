@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Site
 from random import randint
 import uuid
-from .models import Collection,MonetaryCollection,ThingsDonated
+from .models import Collection,MonetaryCollection,ThingsDonated,Donation
 from Homepage.models import Register
 from django.contrib.auth.models import User
 from django.contrib import auth
@@ -74,18 +74,25 @@ def changeDetails(request):
 def Donate(request):
     if request.method == 'POST':
         amount = request.POST['Amount']
+        uid = str(uuid.uuid1())
+        donation = Donation(amount=amount,user=request.user,uid=uid)
+        donation.save()
         param_dict = {
             'MID':'DhKcem03471021583928',
-            'ORDER_ID': str(uuid.uuid1()),
+            'ORDER_ID': donation.uid,
             'TXN_AMOUNT': str(amount),
             'CUST_ID': str(request.user.register.Email),
             'INDUSTRY_TYPE_ID':'Retail',
             'WEBSITE':'WEBSTAGING',
             'CHANNEL_ID':'WEB',
-	        # 'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
-            'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/DONATION/'+str(kind_donation.uid)+'/',
+	        'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+            # 'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/DONATION/'+str(donation.uid)+'/',
         }
-    pass
+
+        param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict,MERCHANT_KEY)
+        return render(request, 'Account/paytm.html', {'param_dict':param_dict})
+    else:
+        return render(request,'Account/Donate.html')
 
 def SiteForm(request,detailSite_id):
     if request.method=='POST':
@@ -107,14 +114,14 @@ def SiteForm(request,detailSite_id):
 
         param_dict = {
             'MID':'DhKcem03471021583928',
-            'ORDER_ID': uid,
+            'ORDER_ID': kind_donation.uid,
             'TXN_AMOUNT': str(amount),
             'CUST_ID': str(request.user.register.Email),
             'INDUSTRY_TYPE_ID':'Retail',
             'WEBSITE':'WEBSTAGING',
             'CHANNEL_ID':'WEB',
-	        # 'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
-            'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+	        'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+            # 'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
         }
 
         param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict,MERCHANT_KEY)
@@ -126,7 +133,7 @@ def SiteForm(request,detailSite_id):
         return render(request, 'Account/KindForm.html', {'detailSite':detailSite,'ThingsRequired':ThingsRequired})
 
 @csrf_exempt
-def ThankYou(request,Donation_Type,CollectionId):
+def ThankYou(request,Donation_Type,uid):
 
     form = request.POST
     response_dict={}
@@ -138,9 +145,13 @@ def ThankYou(request,Donation_Type,CollectionId):
     if verify:
         if response_dict['RESPCODE'] == '01':
             if Donation_Type == "KIND":
-                kind_donation = get_object_or_404(Collection,uid=CollectionId)
+                kind_donation = get_object_or_404(Collection,uid=uid)
                 kind_donation.Paid = True
                 kind_donation.save()
+            elif Donation_Type == "DONATION":
+                donation =  get_object_or_404(Donation,uid=uid)
+                donation.succesful = True
+                donation.save()
             # elif Donation_Type == "MONETARY":
             #     monetary_donation = get_object_or_404(MonetaryCollection,uid=CollectionId)
             #     things = kind_donation.things
@@ -149,6 +160,12 @@ def ThankYou(request,Donation_Type,CollectionId):
             #     monetary_don_col.save()
             return render(request,'Account/ThankYou.html')
         else:
+            if Donation_Type == "KIND":
+                kind_donation = get_object_or_404(Collection,uid=uid)
+                kind_donation.delete()
+            elif Donation_Type == "DONATION":
+                donation =  get_object_or_404(Donation,uid=uid)
+                donation.delete()
             return render(request,'Account/ThankYou.html',{'error':'An error occured, please try again later!'})
     else:
         return render(request,'Account/ThankYou.html',{'error':'An error occured, please try again later!'})

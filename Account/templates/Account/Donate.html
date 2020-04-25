@@ -1,13 +1,436 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <form class="" action="{% url 'Donate' %}" method="post">
-      {% csrf_token %}
-      <input type="number" name="" value="">
-    </form>
-  </body>
-</html>
+{% extends 'Account/AccountBase.html' %}
+
+{% block content %}
+<div class=" page-contents">
+<div class="">
+<div class="post-1242 page type-page status-publish hentry">
+<div data-elementor-type="wp-post" data-elementor-id="1242" class="elementor elementor-1242" data-elementor-settings="[]">
+<div class="elementor-inner">
+<div class="elementor-section-wrap">
+<!-- <section class="elementor-element elementor-element-27a6936 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="27a6936" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-ff9adff elementor-column elementor-col-100 elementor-top-column" data-id="ff9adff" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-e40cb07 elementor-widget elementor-widget-profund_Team" data-id="e40cb07" data-element_type="widget" data-widget_type="profund_Team.default">
+<div class="elementor-widget-container">
+<div class="team-member-area clearfix gird-team-members"><div class="profund-team-content"><div class="profund-team-box"><div class="image"><img width="340" height="400" src="../wp-content/uploads/sites/4/2019/08/2.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/2.jpg 340w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/2-255x300.jpg 255w" sizes="(max-width: 340px) 100vw, 340px" /></div><div class="details"><h3 class="name">Grant Marshall</h3><div class="position">Volunteer</div><div class="social"><a href="index.html#"><i class="fab fa-facebook-f"></i></a><a href="index.html#"><i class="fab fa-twitter"></i></a><a href="index.html#"><i class="fab fa-behance"></i></a><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div><div class="profund-team-content"><div class="profund-team-box"><div class="image"><img width="340" height="400" src="../wp-content/uploads/sites/4/2019/08/3.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/3.jpg 340w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/3-255x300.jpg 255w" sizes="(max-width: 340px) 100vw, 340px" /></div><div class="details"><h3 class="name">Pena Valdez</h3><div class="position">Volunteer</div><div class="social"><a href="index.html#"><i class="fab fa-facebook-f"></i></a><a href="index.html#"><i class="fab fa-twitter"></i></a><a href="index.html#"><i class="fab fa-behance"></i></a><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div><div class="profund-team-content"><div class="profund-team-box"><div class="image"><img width="340" height="400" src="../wp-content/uploads/sites/4/2019/08/1.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/1.jpg 340w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/1-255x300.jpg 255w" sizes="(max-width: 340px) 100vw, 340px" /></div><div class="details"><h3 class="name">Rosalind D. William</h3><div class="position">Volunteer</div><div class="social"><a href="index.html#"><i class="fab fa-facebook-f"></i></a><a href="index.html#"><i class="fab fa-twitter"></i></a><a href="index.html#"><i class="fab fa-behance"></i></a><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div><div class="profund-team-content"><div class="profund-team-box"><div class="image"><img width="340" height="400" src="../wp-content/uploads/sites/4/2019/08/team-55.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/team-55.jpg 340w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/team-55-255x300.jpg 255w" sizes="(max-width: 340px) 100vw, 340px" /></div><div class="details"><h3 class="name">Jessica Miles</h3><div class="position">Volunteer</div><div class="social"><a href="index.html#"><i class="fab fa-facebook-f"></i></a><a href="index.html#"><i class="fab fa-twitter"></i></a><a href="index.html#"><i class="fab fa-behance"></i></a><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div><div class="profund-team-content"><div class="profund-team-box"><div class="image"><img width="340" height="400" src="../wp-content/uploads/sites/4/2019/08/team6.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/team6.jpg 340w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/team6-255x300.jpg 255w" sizes="(max-width: 340px) 100vw, 340px" /></div><div class="details"><h3 class="name">Kerri Barber</h3><div class="position">Volunteer</div><div class="social"><a href="index.html#"><i class="fab fa-facebook-f"></i></a><a href="index.html#"><i class="fab fa-twitter"></i></a><a href="index.html#"><i class="fab fa-behance"></i></a><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div><div class="profund-team-content"><div class="profund-team-box"><div class="image"><img width="340" height="400" src="../wp-content/uploads/sites/4/2019/08/team5.jpg" class="attachment-full size-full" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/team5.jpg 340w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/team5-255x300.jpg 255w" sizes="(max-width: 340px) 100vw, 340px" /></div><div class="details"><h3 class="name">Natasha Gamble</h3><div class="position">Volunteer</div><div class="social"><a href="index.html#"><i class="fab fa-facebook-f"></i></a><a href="index.html#"><i class="fab fa-twitter"></i></a><a href="index.html#"><i class="fab fa-behance"></i></a><a href="index.html#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-73a325c elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="73a325c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-3ff6b7f3 elementor-column elementor-col-100 elementor-top-column" data-id="3ff6b7f3" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-37e3167e elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="37e3167e" data-element_type="section">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-5ec793f3 elementor-column elementor-col-50 elementor-inner-column" data-id="5ec793f3" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-1a39435c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="1a39435c" data-element_type="section">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-daea80d elementor-column elementor-col-50 elementor-inner-column" data-id="daea80d" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-2d7f456d elementor-widget elementor-widget-counter" data-id="2d7f456d" data-element_type="widget" data-widget_type="counter.default">
+<div class="elementor-widget-container">
+<div class="profund-counter">
+<div class="counter-icon"><img width="256" height="256" src="../wp-content/uploads/sites/4/2019/08/counter-1.png" class="attachment-full size-full" alt="" /></div> <h3 class="profund-counter-number-wrapper"><span class="profund-counter-number-prefix"></span><span class="elementor-counter-number" data-duration="2000" data-to-value="2002" data-delimiter=",">
+0</span><span class="profund-counter-number-suffix">
+</span></h3>
+<div class="profund-counter-title">
+SINCE </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-e928ba6 elementor-column elementor-col-50 elementor-inner-column" data-id="e928ba6" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-56a71383 elementor-widget elementor-widget-counter" data-id="56a71383" data-element_type="widget" data-widget_type="counter.default">
+<div class="elementor-widget-container">
+<div class="profund-counter">
+<div class="counter-icon"><img width="256" height="256" src="../wp-content/uploads/sites/4/2019/08/counter-2-1.png" class="attachment-full size-full" alt="" /></div> <h3 class="profund-counter-number-wrapper"><span class="profund-counter-number-prefix"></span><span class="elementor-counter-number" data-duration="2000" data-to-value="2210" data-delimiter=",">
+0</span><span class="profund-counter-number-suffix">
+</span></h3>
+<div class="profund-counter-title">
+PROJECTS </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-274838d8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="274838d8" data-element_type="section">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-37974489 elementor-column elementor-col-50 elementor-inner-column" data-id="37974489" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-5ff960a1 elementor-widget elementor-widget-counter" data-id="5ff960a1" data-element_type="widget" data-widget_type="counter.default">
+<div class="elementor-widget-container">
+<div class="profund-counter">
+<div class="counter-icon"><img width="256" height="256" src="../wp-content/uploads/sites/4/2019/08/counter-4-1.png" class="attachment-full size-full" alt="" /></div> <h3 class="profund-counter-number-wrapper"><span class="profund-counter-number-prefix"></span><span class="elementor-counter-number" data-duration="2000" data-to-value="337" data-delimiter=",">
+0</span><span class="profund-counter-number-suffix">
+ M</span></h3>
+<div class="profund-counter-title">
+RAISE </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-2ccc46aa elementor-column elementor-col-50 elementor-inner-column" data-id="2ccc46aa" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-70360284 elementor-widget elementor-widget-counter" data-id="70360284" data-element_type="widget" data-widget_type="counter.default">
+<div class="elementor-widget-container">
+<div class="profund-counter">
+<div class="counter-icon"><img width="256" height="256" src="../wp-content/uploads/sites/4/2019/08/counter-3-1.png" class="attachment-full size-full" alt="" /></div> <h3 class="profund-counter-number-wrapper"><span class="profund-counter-number-prefix"></span><span class="elementor-counter-number" data-duration="2000" data-to-value="337" data-delimiter=",">
+0</span><span class="profund-counter-number-suffix">
+</span></h3>
+<div class="profund-counter-title">
+VOLUNTEER </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-70e6a8cf elementor-column elementor-col-50 elementor-inner-column" data-id="70e6a8cf" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-2cc84b38 elementor-widget elementor-widget-section-title-addons" data-id="2cc84b38" data-element_type="widget" data-widget_type="section-title-addons.default">
+<div class="elementor-widget-container">
+<div class="profund-section-heading"><h5 class="top-heading heading-bar-bottom">Get Started Today.</h5><h2 class="main-heading"><span>Collaborate with team members to rise</span></h2><div class="desc"><p>The world calls for, and expects from us, simplicity of life, the spirit of prayer, charity towards all, especially towards the lowly and the poor.When someone does something that they know that they shouldn’t do this again in you house.</p><div class="elementor-element elementor-element-3272eaa elementor-widget elementor-widget-vcharity-text-box" data-id="3272eaa"><div class="elementor-widget-container"><div class="vcharity-text-box"><div class="desc"><p>They really have a choice. Maybe what I mean to say is did they really have a chance. Harness the power of social media to spread.</p></div></div></div></div></div></div> </div>
+</div>
+<div class="elementor-element elementor-element-3aedaafe elementor-widget elementor-widget-profund_button" data-id="3aedaafe" data-element_type="widget" data-widget_type="profund_button.default">
+<div class="elementor-widget-container">
+<a class="arrow-button mouse-dir" href="index.html#"><span class="button-icon"><i class="flaticon-right-arrow-1"></i></span><span class="button-text"><span class="button-title">Learn More</span></span><span class="dir-part"></span></a> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-508d13b0 elementor-section-stretched elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="508d13b0" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-5cc4e5ae elementor-column elementor-col-50 elementor-top-column" data-id="5cc4e5ae" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-481e53dd elementor-widget elementor-widget-section-title-addons" data-id="481e53dd" data-element_type="widget" data-widget_type="section-title-addons.default">
+<div class="elementor-widget-container">
+<div class="profund-section-heading"><h5 class="top-heading heading-bar-bottom">Get Started Today.</h5><h2 class="main-heading"><span>Be A Part Of The Proud Partner.</span></h2></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-22a9eeb6 elementor-column elementor-col-25 elementor-top-column" data-id="22a9eeb6" data-element_type="column">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-5d41be79 elementor-column elementor-col-25 elementor-top-column" data-id="5d41be79" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-134f6f91 elementor-widget elementor-widget-profund_button" data-id="134f6f91" data-element_type="widget" data-widget_type="profund_button.default">
+<div class="elementor-widget-container">
+<a class="arrow-button mouse-dir" href="index.html#"><span class="button-icon"><i class="flaticon-like"></i></span><span class="button-text"><span class="button-title">Donate Now</span></span><span class="dir-part"></span></a> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-7d86cbe7 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7d86cbe7" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-1bef18e1 elementor-column elementor-col-100 elementor-top-column" data-id="1bef18e1" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-8e6e80e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="8e6e80e" data-element_type="section">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-31472df1 elementor-column elementor-col-16 elementor-inner-column" data-id="31472df1" data-element_type="column">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-1fa6b666 elementor-column elementor-col-66 elementor-inner-column" data-id="1fa6b666" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-7aa3955c elementor-widget elementor-widget-section-title-addons" data-id="7aa3955c" data-element_type="widget" data-settings="{&quot;icon_color&quot;:&quot;rgba(244,244,244,0.9)&quot;}" data-widget_type="section-title-addons.default">
+<div class="elementor-widget-container">
+<div class="profund-section-heading"><h5 class="top-heading heading-bar-left-right">LATEST STORIES</h5><h2 class="main-heading"><span>Some Of The Recent Stories</span></h2><div class="icon"><i class="flaticon-heart"></i></div></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-51258adc elementor-column elementor-col-16 elementor-inner-column" data-id="51258adc" data-element_type="column">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-36677739 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="36677739" data-element_type="section">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-ef1be8a elementor-column elementor-col-100 elementor-inner-column" data-id="ef1be8a" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-1faeef98 elementor-widget elementor-widget-profund-postcarousel-addons" data-id="1faeef98" data-element_type="widget" data-widget_type="profund-postcarousel-addons.default">
+<div class="elementor-widget-container">
+<div class="profund_posts_carousel profundcore-carousel-activation" data-settings="{&quot;arrows&quot;:false,&quot;arrow_prev_txt&quot;:null,&quot;arrow_next_txt&quot;:null,&quot;dots&quot;:false,&quot;autoplay&quot;:false,&quot;autoplay_speed&quot;:3000,&quot;animation_speed&quot;:300,&quot;pause_on_hover&quot;:true,&quot;center_mode&quot;:false,&quot;center_padding&quot;:0,&quot;display_columns&quot;:3,&quot;scroll_columns&quot;:1,&quot;tablet_width&quot;:992,&quot;tablet_display_columns&quot;:2,&quot;tablet_scroll_columns&quot;:1,&quot;mobile_width&quot;:480,&quot;mobile_display_columns&quot;:1,&quot;mobile_scroll_columns&quot;:1}">
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-11-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/college-students-increasingly-turn-to-gofundme-to-pay-for-tuition/index.html">College Students Increasingly Turn to</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/college-students-increasingly-turn-to-gofundme-to-pay-for-tuition/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-15-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-15-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/a-universal-desire-to-help-how-gofundme-reached-40-million-donors/index.html">A Universal Desire to Help:</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/a-universal-desire-to-help-how-gofundme-reached-40-million-donors/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-24-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-24-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-24-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-24-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-24-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-24-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/be-part-of-the-story-the-san-diego-union-tribune-partners-with-gofundme/index.html">Be Part of the Story:</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/be-part-of-the-story-the-san-diego-union-tribune-partners-with-gofundme/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-8-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-8-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-8-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-8-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-8-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-8-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/ahead-of-hurricane-harveys-landfall-gofundme-briefs-texas-and-louisiana-officials/index.html">Ahead of Hurricane Harvey’s Landfall,</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/ahead-of-hurricane-harveys-landfall-gofundme-briefs-texas-and-louisiana-officials/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-11-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-11-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/introducing-true-stories-of-good-people-gofundmes-first-podcast/index.html">Introducing “True Stories of Good</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+ </div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/introducing-true-stories-of-good-people-gofundmes-first-podcast/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-16-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-16-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-16-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-16-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-16-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-16-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/how-to-make-a-podcast-in-318-days/index.html">How to Make a Podcast</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/how-to-make-a-podcast-in-318-days/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-17-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-17-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-17-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-17-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-17-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-17-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/ahead-of-hurricane-florence-gofundme-briefs-officials-in-north-carolina-and-south-carolina/index.html">Ahead of Hurricane Florence, ProFund</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/ahead-of-hurricane-florence-gofundme-briefs-officials-in-north-carolina-and-south-carolina/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-20-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-20-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-20-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-20-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-20-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-20-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/netflixs-orange-is-the-new-black-brings-lasting-change-to-criminal-justice-system-with-new-gofundme-initiative/index.html">Netflix’s “Orange Is the New</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/netflixs-orange-is-the-new-black-brings-lasting-change-to-criminal-justice-system-with-new-gofundme-initiative/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+<div class="post_item">
+<div class="post-box">
+<div class="post_image">
+<img width="1568" height="882" src="../wp-content/uploads/sites/4/2019/08/post-21-1-1568x882.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-21-1-1568x882.jpg 1568w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-21-1-300x169.jpg 300w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-21-1-768x432.jpg 768w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-21-1-1024x576.jpg 1024w, https://spaceraceit.com/wp/profund/home-3/wp-content/uploads/sites/4/2019/08/post-21-1-450x253.jpg 450w" sizes="(max-width: 1568px) 100vw, 1568px" /> </div>
+<div class="post_content">
+<div class="post-header">
+<h4 class="title"><a href="../2019/08/03/gofundme-and-60-second-docs-launch-new-short-video-series/index.html">ProFund and 60 Second Docs</a></h4>
+<div class="post-meta">
+<div class="meta-item">August 3, 2019</div>
+<div class="meta-item"><a href="../author/ashekur_rahman/index.html">Ashekur_rahman</a></div>
+</div>
+</div>
+<a class="readmore-btn" href="../2019/08/03/gofundme-and-60-second-docs-launch-new-short-video-series/index.html">Read More<span class="icon"><i class="flaticon-right-arrow-1"></i></span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> -->
+<section class="elementor-element elementor-element-57e9952 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="57e9952" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-background-overlay"></div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-755377f elementor-column elementor-col-100 elementor-top-column" data-id="755377f" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<section class="elementor-element elementor-element-57682161 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="57682161" data-element_type="section">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-row">
+<div class="elementor-element elementor-element-4ce7202d elementor-column elementor-col-16 elementor-inner-column" data-id="4ce7202d" data-element_type="column">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-3a3dc6a2 elementor-column elementor-col-66 elementor-inner-column" data-id="3a3dc6a2" data-element_type="column">
+<div class="elementor-column-wrap  elementor-element-populated">
+<div class="elementor-widget-wrap">
+<div class="elementor-element elementor-element-3824cacf elementor-widget elementor-widget-section-title-addons" data-id="3824cacf" data-element_type="widget" data-settings="{&quot;icon_color&quot;:&quot;rgba(244,244,244,0.9)&quot;}" data-widget_type="section-title-addons.default">
+<div class="elementor-widget-container">
+<div class="profund-section-heading"><h5 class="top-heading heading-bar-none">Making world a better place</h5><h2 class="main-heading"><span>Contribute</span></h2></div> </div>
+</div>
+<div class="elementor-element elementor-element-ecf4bc0 elementor-widget elementor-widget-profund_Subscribe_Form" data-id="ecf4bc0" data-element_type="widget" data-widget_type="profund_Subscribe_Form.default">
+<div class="elementor-widget-container">
+<div class="shortcode-form">
+<form id="mc4wp-form-1" action="{% url 'Donate' %}" class="mc4wp-form mc4wp-form-170" method="POST" >
+{% csrf_token %}
+<div class="mc4wp-form-fields"><div class="subscribe-form">
+<input type="number" class="input-control" name="Amount" placeholder="Amount (INR)" required>
+<button type="submit" class="submit-button arrow-button mouse-dir"><span class="dir-part"></span><i class="fa fa-paper-plane"></i>&nbsp;&nbsp; Donate</button>
+</div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1587553530" /><input type="hidden" name="_mc4wp_form_id" value="170" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-725e38b9 elementor-column elementor-col-16 elementor-inner-column" data-id="725e38b9" data-element_type="column">
+<div class="elementor-column-wrap">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+{% endblock %}
