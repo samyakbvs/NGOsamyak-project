@@ -121,8 +121,8 @@ def SiteForm(request,detailSite_id):
             'INDUSTRY_TYPE_ID':'Retail',
             'WEBSITE':'WEBSTAGING',
             'CHANNEL_ID':'WEB',
-	        'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
-            # 'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+	        # 'CALLBACK_URL':'http://165.22.216.110/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
+            'CALLBACK_URL':'http://127.0.0.1:8000/Account/ThankYou/KIND/'+str(kind_donation.uid)+'/',
 
         }
 
