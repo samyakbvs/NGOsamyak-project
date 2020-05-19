@@ -25,7 +25,7 @@ SECRET_KEY = 'l&62tj!*&02k+5qpgj7*ydkzig&ql6@pk7yxy9y%(wogstfeu^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['165.22.216.110','127.0.0.1','www.uchitngo.org','uchitngo.org','134.209.148.242']
+ALLOWED_HOSTS = ['165.22.216.110','127.0.0.1','www.uchitngo.org','uchitngo.org','134.209.148.242','samyakbvs.com']
 
 
 # Application definition
