@@ -21,7 +21,6 @@ MainUser = 'Alpha'
 
 
 def Homepage(request):
-    auth.logout(request)
     return render(request, 'Account/Home.html')
 
 def Contact(request):

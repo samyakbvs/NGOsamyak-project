@@ -159,8 +159,11 @@ def verifyOTP(request):
 def Home(request):
     return render(request, 'Homepage/Home.html')
 
+def About(request):
+    return render(request, 'Homepage/About.html')
+
 
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
-    return redirect('H')
+    return redirect('authHome')
