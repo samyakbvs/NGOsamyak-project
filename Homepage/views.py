@@ -155,6 +155,8 @@ def verifyOTP(request):
         user.delete()
         return redirect('Homepage')
 
+def error(request):
+    return render(request,'Homepage/404.html')
 
 def Home(request):
     return render(request, 'Homepage/Home.html')
